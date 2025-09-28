@@ -82,19 +82,19 @@ CAPTION_LANGUAGES = ["Bhojpuri", "Hindi", "Bengali", "Tamil", "English", "Bangla
 # ============================
 # Verification Settings
 # ============================
-VERIFY = bool(environ.get('VERIFY', False))  # Verification On (True) / Off (False)
+VERIFY = bool(environ.get('VERIFY', True))  # Verification On (True) / Off (False)
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 24))  # Add time in hours
-VERIFIED_LOG = int(environ.get('VERIFIED_LOG', '-1001868871195'))  # Log channel id (make sure bot is admin)
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/How_to_Download_7x/30')  # How to open tutorial link for verification
+VERIFIED_LOG = int(environ.get('VERIFIED_LOG', '-1002399750144'))  # Log channel id (make sure bot is admin)
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/MRN_Tutorial/1814')  # How to open tutorial link for verification
 
 # ============================
 # Link Shortener Configuration
 # ============================
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'inshorturl.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/How_to_Download_7x/30')  # Tutorial video link for opening shortlink website
-IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'arolinks.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '1b8e94e97189da28b35fcab06c0850bd92569751')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/MRN_Tutorial/1814')  # Tutorial video link for opening shortlink website
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # ============================
 # Channel & Group Links Configuration
@@ -108,9 +108,9 @@ OWNERID = int(os.environ.get('OWNERID', '6139759254'))  # Replace with the actua
 # ============================
 # User Configuration
 # ============================
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '7473323779').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '7473323779').split()]
 
 # ============================
 # Miscellaneous Configuration
@@ -168,7 +168,7 @@ else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else "https://{}/".format(FQDN, PORT)
+URL = "https://resident-maggee-mzautofilterbot-9598652d.koyeb.app/".format(FQDN) if ON_HEROKU or NO_PORT else "https://resident-maggee-mzautofilterbot-9598652d.koyeb.app/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'codeflix'))
@@ -182,9 +182,9 @@ else:
     ON_HEROKU = False
 HAS_SSL = bool(getenv('HAS_SSL', True))
 if HAS_SSL:
-    URL = "https://{}/".format(FQDN)
+    URL = "https://resident-maggee-mzautofilterbot-9598652d.koyeb.app/".format(FQDN)
 else:
-    URL = "http://{}/".format(FQDN)
+    URL = "https://resident-maggee-mzautofilterbot-9598652d.koyeb.app/".format(FQDN)
 
 # ============================
 # Reactions Configuration
