@@ -56,7 +56,7 @@ MULTI_FSUB = [int(channel_id) for channel_id in environ.get('MULTI_FSUB', '-1002
 # Payment Configuration
 # ============================
 QR_CODE = environ.get('QR_CODE', 'https://files.catbox.moe/ev6f8y.jpg')
-OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'mrmuzaffarimam-1@okaxis')
+OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '@Mrn_Officialx')
 
 #Auto approve 
 CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '-1002486183403').split()]
